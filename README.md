@@ -1,7 +1,14 @@
 # state-selector-to-props
 A helper method which aims to simplify mapping state values to props in react-redux containers.
 
-## How to use
+## Getting Started
+Install as a dependency to be used within your app:
+```
+yarn add state-selector-to-props
+npm i --save state-selector-to-props
+```
+
+### How to use
 This constructs your mapStateToProps method automatically for you, simpy by passing an object with the selectors like so:
 ```
 import { connect } from 'react-redux';
