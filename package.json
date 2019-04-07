@@ -1,0 +1,47 @@
+{
+  "name": "state-selector-to-props",
+  "version": "1.0.0",
+  "description": "A helper method which aims to simplify mapping state values to props in react-redux containers.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node_modules/.bin/jest --ci --verbose --coverage --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dantheuber/state-selector-to-props.git"
+  },
+  "keywords": [
+    "react-redux",
+    "react",
+    "redux",
+    "state",
+    "selector"
+  ],
+  "author": "Daniel Essig",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dantheuber/state-selector-to-props/issues"
+  },
+  "homepage": "https://github.com/dantheuber/state-selector-to-props#readme",
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": ["src/*.js"],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "jest-junit": "^6.3.0"
+  }
+}
