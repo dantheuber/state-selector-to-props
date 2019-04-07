@@ -5,6 +5,9 @@ A helper method which aims to simplify mapping state values to props in react-re
 Install as a dependency to be used within your app:
 ```
 yarn add state-selector-to-props
+```
+or
+```
 npm i --save state-selector-to-props
 ```
 
