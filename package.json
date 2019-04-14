@@ -1,10 +1,14 @@
 {
   "name": "state-selector-to-props",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A helper method which aims to simplify mapping state values to props in react-redux containers.",
-  "main": "src/index.js",
+  "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/jest --ci --verbose --coverage --no-cache"
+    "build": "bash scripts/build",
+    "prepublishOnly": "npm run build",
+    "lint": "node_modules/.bin/eslint src --fix",
+    "clean": "rimraf index.js index.js.map",
+    "test": "bash scripts/test"
   },
   "repository": {
     "type": "git",
@@ -23,9 +27,18 @@
     "url": "https://github.com/dantheuber/state-selector-to-props/issues"
   },
   "homepage": "https://github.com/dantheuber/state-selector-to-props#readme",
+  "babel": {
+    "presets": [
+      "react-app"
+    ]
+  },
   "jest": {
-    "verbose": true,
-    "collectCoverageFrom": ["src/*.js"],
+    "testPathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "collectCoverageFrom": [
+      "src/index.js"
+    ],
     "coverageThreshold": {
       "global": {
         "branches": 100,
@@ -34,14 +47,50 @@
         "statements": 100
       }
     },
-    "reporters": [
-      "default",
-      "jest-junit"
-    ]
+    "roots": [
+      "src/"
+    ],
+    "testResultsProcessor": "./node_modules/jest-junit"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb"
+    ],
+    "env": {
+      "browser": true,
+      "jasmine": true,
+      "jest": true
+    },
+    "settings": {
+      "import/resolver": {
+        "jest": {}
+      }
+    },
+    "parser": "babel-eslint",
+    "rules": {
+      "no-underscore-dangle": 0,
+      "jsx-a11y/href-no-hash": 0
+    }
   },
   "dependencies": {},
   "devDependencies": {
-    "jest": "^24.7.1",
-    "jest-junit": "^6.3.0"
+    "babel-cli": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-react-app": "^3.1.1",
+    "eslint": "^4.2.0",
+    "eslint-config-airbnb": "^15.0.2",
+    "eslint-import-resolver-jest": "^2.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.12.4",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^20.0.4",
+    "jest-environment-node-debug": "^2.0.0",
+    "jest-junit": "^2.1.0",
+    "rimraf": "^2.6.3"
   }
 }

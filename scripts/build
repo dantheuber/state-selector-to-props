@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -e
+
+NODE_ENV=production node_modules/.bin/babel src --out-dir . --ignore test.js --source-maps --copy-files

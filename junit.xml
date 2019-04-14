@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="2" failures="0" time="3.847">
-  <testsuite name="stateSelect" errors="0" failures="0" skipped="0" timestamp="2019-04-07T20:27:19" time="1.899" tests="2">
-    <testcase classname="stateSelect returns a method" name="stateSelect returns a method" time="0.004">
+<testsuites name="jest tests">
+  <testsuite name="stateSelect" tests="3" errors="0" failures="0" skipped="0" timestamp="2019-04-14T21:29:20" time="0.812">
+    <testcase classname="stateSelect returns a method" name="stateSelect returns a method" time="0.003">
     </testcase>
-    <testcase classname="stateSelect constructed method accepts state and ownProps to be used in selectors" name="stateSelect constructed method accepts state and ownProps to be used in selectors" time="0.002">
+    <testcase classname="stateSelect constructed method accepts state and ownProps to be used in selectors" name="stateSelect constructed method accepts state and ownProps to be used in selectors" time="0.001">
+    </testcase>
+    <testcase classname="stateSelect returns mapped state values in object matching selector name" name="stateSelect returns mapped state values in object matching selector name" time="0.001">
     </testcase>
   </testsuite>
 </testsuites>
